@@ -37,6 +37,11 @@ abstract class LabeledEnum extends Enum
         return $this->label;
     }
 
+    public static function collection() : LabeledEnumCollection
+    {
+        return new LabeledEnumCollection(parent::values());
+    }
+
     /**
      * @return array<mixed,string>
      */
